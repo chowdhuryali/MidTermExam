@@ -18,6 +18,19 @@ public class DuplicateWord {
 
         //implementation here...
 
+        int count;
+        string = string.toLowerCase();
+        String words[] = string.split(" ");
+        System.out.println("Duplicate words are:");
+        for (int i =0; i< words.length; i++){
+            count = 1;
+            if (words[i].equals(words[i])){
+                count++;
+                words[i] = "0";
+
+            }
+
+        }
 
     }
 
