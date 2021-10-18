@@ -1,4 +1,5 @@
 package math;
+import java.util.*;
 
 /**
  * Created by mrahman on 04/02/18.
@@ -14,8 +15,14 @@ public class Factorial {
 
 
         //implementation here...
+int num, factorial = 1, i;
+Scanner in = new Scanner (System.in);
+System.out.println("Enter a number");
+num = in.nextInt();
 
-
+for (i = 1; i <= num; i++){
+    factorial = factorial * i;
+}
+System.out.println("Factorial of " + num + "!" + " = " + factorial);
     }
-
 }
