@@ -21,17 +21,22 @@ public class DuplicateWord {
         int count;
         string = string.toLowerCase();
         String words[] = string.split(" ");
-        System.out.println("Duplicate words are:");
-        for (int i =0; i< words.length; i++){
+        System.out.println("Duplicate words in given string:");
+        for (int i = 0; i < words.length; i++) {
             count = 1;
-            if (words[i].equals(words[i])){
-                count++;
-                words[i] = "0";
+            for (int j = i + 1; j < words.length; j++) {
+                if (words[i].equals(words[j])) {
+                    count++;
+                    words[j] = "0";
+
+                }
 
             }
+
+            if (count > 1 && words[i] != "0")
+                System.out.println(words[i]);
 
         }
 
     }
-
 }

@@ -18,7 +18,7 @@ public class Numbers {
 	 */
 
 	public static void main(String[] args) throws Exception {
-		
+
 		int [] num = new int[10];
 		storeRandomNumbers(num);
 		ConnectDB connectDB = new ConnectDB();
@@ -26,8 +26,10 @@ public class Numbers {
 		Sort algo = new Sort();
 		algo.selectionSort(num);
 		long selectionSortExecutionTime = algo.executionTime;
+		System.out.println("Selection Sort:");
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
-        connectDB.insertDataFromArrayToMySql(num, "selection_sort", "SortingNumbers");
+		System.out.println("......................");
+		connectDB.insertDataFromArrayToMySql(num, "selection_sort", "SortingNumbers");
         List<String> numbers = connectDB.readDataBase("selection_sort", "SortingNumbers");
         printValue(numbers);
 		int n = num.length;
@@ -35,7 +37,14 @@ public class Numbers {
 		//Insertion Sort
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
+		System.out.println("Insertion Sort:");
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
+		System.out.println("......................");
+		connectDB.insertDataFromArrayToMySql(num, "insertion_sort", "SortingNumbers");
+		List<String> Inumbers = connectDB.readDataBase("selection_sort", "SortingNumbers");
+		printValue(Inumbers);
+		int In = num.length;
+		randomize (num, n);
 
 		//By following above, Continue for rest of the Sorting Algorithm....
 
