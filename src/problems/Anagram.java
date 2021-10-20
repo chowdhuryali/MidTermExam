@@ -13,6 +13,10 @@ public class Anagram {
         checkAnagram("MARY", "ARMY");
     }
     public static void checkAnagram(String word, String anagram){
+        String copyOfword = word.replaceAll("s", "");
+        String copyOfanagram = anagram.replaceAll("s", "");
+
+        boolean status = true;
 
         //implementation here...
 

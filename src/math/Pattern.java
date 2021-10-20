@@ -17,6 +17,9 @@ public class Pattern {
 
 		//implementation here...
 
+		for(int i=100; i>=0; i--){
+			System.out.print(i+",");
+		}
 
 	}
 }

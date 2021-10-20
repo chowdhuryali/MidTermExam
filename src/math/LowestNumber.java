@@ -16,7 +16,20 @@ public class LowestNumber {
 
 		//implementation here...
 
+		int temp, size;
+		int array[] = {11, 21, 31, 41, 51, 61};
+		size = array.length;
 
+		for(int i = 0; i<size; i++){
+			for (int k = i+1; k<size; k++){
+				if (array[i]>array[k]){
+					temp = array[i];
+					array[i] = array[k];
+					array[k] = temp;
+				}
+			}
+
+		}
+		System.out.println("LowestNumber in the Array is: " +array[0]);
 	}
-
 }
