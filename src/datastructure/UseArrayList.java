@@ -17,10 +17,27 @@ public class UseArrayList {
 
         //implementation here
 
+		ArrayList<String> arrayList =new ArrayList<>();
+		arrayList.add("New York");
+		arrayList.add("New Jersey");
+		arrayList.add("Tampa");
+		arrayList.add("Los Angeles");
 
-		//connect to db
-	
+		for(int i=0;i<arrayList.size();i++) {
+			System.out.println(arrayList.get(i)+" ");
+		}
 
+
+		arrayList.remove("Tampa");
+
+
+		Iterator it = arrayList.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+
+		}
 	}
-
 }
+
+
+//connect to db

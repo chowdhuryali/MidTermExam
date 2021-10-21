@@ -5,14 +5,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
-import databases.ConnectDB;
 
 public class DataReader {
 
 	public static void main(String[] args) {
 		/*
 		 * User API to read the below textFile and print to console.
-		 * Use BufferedReader class. 
+		 * Use BufferedReader class.
 		 * Use try....catch block to handle Exception.
 		 *
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
@@ -26,6 +25,24 @@ public class DataReader {
 		 */
 
 		//implementation here
-	}
-}
 
+		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		BufferedReader cd=null;
+		try{
+			cd=new BufferedReader(new FileReader(textFile));
+			String file;
+			while ((file=cd.readLine())!= null){
+				String d=file;
+				System.out.println(d);
+
+
+
+			}
+		}catch (FileNotFoundException e){
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -8,7 +8,12 @@
 //      This class is about Unit testing for Sorting Algorithm.
 //     */
 //    public static void main(String[] args) {
-//        int [] unSortedArray = {6,9,2,5,1,0,4};
+//        //Create Sort object
+//        //apply unsorted array to selectionSort.
+//        //verify if the unsorted array is sorted by the selection sort algorithm.
+//
+//        //Now implement Unit test for rest of the soring algorithm...................below
+//        int [] unSortedArray = new int[]{6,9,2,5,1,0,4};
 //        int [] sortedArray =   {0,1,2,4,5,6,9};
 //        //Create Sort object
 //        Sort sort = new Sort();
@@ -20,9 +25,6 @@
 //        }catch(Exception ex){
 //            ex.getMessage();
 //        }
-//
-//        //Now do for rest of the algorithm...................below
-//
 //        //bubble sort
 //        unSortedArray = new int[]{6,9,2,5,1,0,4};
 //        sort.bubbleSort(unSortedArray);
