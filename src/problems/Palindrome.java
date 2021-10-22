@@ -11,12 +11,27 @@ public class Palindrome {
 
         //implementation here...
 
+        String str = "civic";
+
+        if (checkPalindrome(str))
+            System.out.print("given word is palindrome");
+        else
+            System.out.print("given word is not palindrome");
 
     }
-    public static void checkPalindrome(String string){
 
-        //implementation here...
+    public static boolean checkPalindrome(String str) {
 
+        int i = 0, k = str.length() - 1;
 
+        while (i < k) {
+
+            if (str.charAt(i) != str.charAt(k))
+                return false;
+
+            i++;
+            k--;
+        }
+        return true;
     }
 }
