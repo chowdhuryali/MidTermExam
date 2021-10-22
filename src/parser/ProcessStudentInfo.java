@@ -36,19 +36,26 @@ public class ProcessStudentInfo {
 
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 				//Path of XML data to be read.
+				String pathSelenium = System.getProperty("user.dir") + "/src/parser/selenium.xml";
+				String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
+				String tag = "id";
 
 
                 //Create ConnectDB Object
 
 
 				//Declare a Map with List<String> into it.
+				Map<String, List<Student>> list = new LinkedHashMap<String, List<Student>>();
 
 
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
+				List<Student> seleniumStudents = new ArrayList<Student>();
+				List<Student> qtpStudents = new ArrayList<Student>();
 
 				
 				//Parse Data using parseData method and then store data into Selenium ArrayList.
+				//seleniumStudents = xmlReader.parseData(tag, pathSelenium);
 
 
 				//Parse Data using parseData method and then store data into Qtp ArrayList.
